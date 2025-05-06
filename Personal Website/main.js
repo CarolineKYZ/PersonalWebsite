@@ -11,35 +11,36 @@ sidebarBtn.addEventListener("click", function() {elementToggleFunc(sidebar); })
 
 //Activating Modal-testimonial
 
-const testimonialsItem = document.querySelectorAll('[data-testimonials-item]');
 const modalContainer = document.querySelector('[data-modal-container]');
+const modalContent = document.querySelector('[data-modal-content]');
 const modalCloseBtn = document.querySelector('[data-modal-close-btn]');
 const overlay = document.querySelector('[data-overlay]');
+const projectItems = document.querySelectorAll('[data-project-item]');
 
-const modalImg = document.querySelector('[data-modal-img]');
-const modalTitle = document.querySelector('[data-modal-title]');
-const modalText = document.querySelector('[data-modal-text]');
-
-const testimonialsModalFunc = function () {
-    modalContainer.classList.toggle('active');
-    overlay.classList.toggle('active');
+function toggleModal() {
+  modalContainer.classList.toggle('active');
+  overlay.classList.toggle('active');
 }
 
-for (let i = 0; i < testimonialsItem.length; i++) {
-    testimonialsItem[i].addEventListener('click', function () {
-        modalImg.src = this.querySelector('[data-testimonials-avatar]').src;
-        modalImg.alt = this.querySelector('[data-testimonials-avatar]').alt;
-        modalTitle.innerHTML = this.querySelector('[data-testimonials-title]').innerHTML;
-        modalText.innerHTML = this.querySelector('[data-testimonials-text]').innerHTML;
+projectItems.forEach(item => {
+  item.addEventListener('click', function (e) {
+    e.preventDefault(); // Prevents the page from jumping due to href="#"
 
-        testimonialsModalFunc();
-    })
-}
+    const modalData = item.querySelector('.project-modal-data');
+    if (!modalData) return;
+
+    // Clone the modalData content and insert it into modal
+    modalContent.innerHTML = modalData.innerHTML;
+    toggleModal();
+  });
+});
+
 
 //Activating close button in modal-testimonial
 
-modalCloseBtn.addEventListener('click', testimonialsModalFunc);
-overlay.addEventListener('click', testimonialsModalFunc);
+modalCloseBtn.addEventListener('click', toggleModal);
+overlay.addEventListener('click', toggleModal);
+
 
 //Activating Filter Select and filtering options
 
@@ -130,6 +131,7 @@ for(let i = 0; i < navigationLinks.length; i++) {
         }
     });
 }
+
 
 
 
