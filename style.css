@@ -596,12 +596,14 @@ article { display: none; }
 
 /* modal headers */
 .modal-h {
-    color: lightslategray;
-    font-size: var(--fs5);
-    font-weight: var(--fw300);
+    color: rgb(93, 110, 127);
+    font-size: var(--fs4);
+    font-weight: var(--fw500);
     line-height: 1.6;
     text-align: center;
     margin: 10px;
+    text-transform: capitalize;
+    letter-spacing: 2px;
 }
 
 /* modal bold */
@@ -621,6 +623,12 @@ article { display: none; }
     line-height: 1.6;
 }
 
+.sub-title {
+     font-size: var(--fs4);
+    display: inline;
+    padding-bottom: 15px;
+    font-weight: 600;
+}
 
 .title h2 {
     font-size: 28px;
@@ -636,6 +644,13 @@ article { display: none; }
     width: 200px; 
     float: left; 
     margin-right: 15px;
+}
+
+mark {
+  display: inline-block;
+  line-height: 0em;
+  padding-bottom: 0.8em;
+  background: #a3cfd7dc;
 }
 
 /*CLIENTS*/
@@ -1115,8 +1130,8 @@ video {
 
 .top-buffer {
     margin-top: 30px;
-
-    font-size: var(--fs6);
+    margin-bottom: 25px;
+    font-size: var(--fs5);
     color:#333;
     text-align: left;
     line-height: 1.6;
