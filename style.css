@@ -371,9 +371,9 @@ article { display: none; }
     bottom: 0;
     left: 0;
     width: 100%;
-    background: var(--light-gray70);
+    background: var(--light-gray);
     backdrop-filter: blur(10px);
-    border: 1px solid var(--light-gray60);
+    border: 3px solid var(--light-gray60);
     border-radius: 12px 12px 0 0;
     box-shadow: var(--shadow2);
     z-index: 5;
@@ -394,8 +394,8 @@ article { display: none; }
     transition: color var(--transition1);
 }
 
-    .navbar-link:hover, .navbar-link:focus { color: var(--light-gray70); }
-    .navbar-link.active { color: var(--light-accent); }
+    .navbar-link:hover, .navbar-link:focus { color: var(--light-accent); }
+    .navbar-link.active { color: var(--accent-blue); }
 
 /*ABOUT*/
 
@@ -408,8 +408,8 @@ article { display: none; }
 
 .about-text {
     color: white;
-    font-size: var(--fs5);
-    font-weight: var(--fw300);
+    font-size: var(--fs4);
+    font-weight: var(--fw400);
     line-height: 1.6;
 }
 
@@ -447,7 +447,7 @@ article { display: none; }
         content: '';
         position: absolute;
         inset: 1px;
-        background: var(--light-gray70);
+        background: var(--light-gray);
         border-radius: inherit;
         z-index: -1;
     }
@@ -459,7 +459,7 @@ article { display: none; }
 
 .service-item-title { 
     margin-bottom: 7px; 
-    color: var(--background-dark);
+    color: var(--accent-blue);
     font-size: var(--fs7);
     text-transform: uppercase;
 }
@@ -473,9 +473,9 @@ article { display: none; }
 
 
 .service-item-text {
-    color: var(--background-dark);
+    color: rgb(67, 67, 67);
     font-size: var(--fs6);
-    font-weight: var(--fw300);
+    font-weight: var(--fw400);
     line-height: 1.6;
 }
 
@@ -707,8 +707,8 @@ mark {
 }
 
     .timeline-list span {
-        color: var(--background-dark);
-        font-weight: var(--fw400);
+        color:#7a9ca4;
+        font-weight: var(--fw600);
         line-height: 1.6;
     }
 
@@ -733,12 +733,12 @@ mark {
         height: 6px;
         width: 6px;
         border-radius: 50%;
-        background: var(--text-gradient-yellow);
+        background: var(--accent-blue);
         box-shadow: 0 0 0 4px var(--jet);
     }
 
 .timeline-item-title {
-    font-size: var(--fs6);
+    font-size: var(--fs4);
     line-height: 1.3;
     margin-bottom: 7px;
     color: var(--white2);
@@ -746,7 +746,7 @@ mark {
 
 .timeline-text {
     color: var(--white1);
-    font-weight: var(--fw300);
+    font-weight: var(--fw400);
     line-height: 1.6;
     text-align: justify;
 }
@@ -1136,6 +1136,7 @@ video {
     text-align: left;
     line-height: 1.6;
 }
+
 
 /*CONTACT*/
 
