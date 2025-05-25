@@ -98,11 +98,13 @@ html {
     cursor: url(images/cursor.png), default;
 }
 
-body { 
-    background-image: url(images/background\ filter.jpg); 
+body {
+    background-image: url('images/background filter.jpg');
+    background-size: cover;
+    background-position: center;
     background-repeat: no-repeat;
     background-attachment: fixed;
-    cursor: url(images/cursor.png), default;
+    cursor: url('images/cursor.png'), default;
 }
 
 main {
