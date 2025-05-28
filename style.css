@@ -116,7 +116,7 @@ main {
 /* sidebar container */
 .sidebar, article {
     background: var(--background-light70);
-    border: 2px solid var(--background-light60);
+    border: 3px solid var(--background-light60);
     border-radius: 20px;
     box-shadow: var(--shadow1);
     z-index: 1;
@@ -459,7 +459,15 @@ article { display: none; }
 .service-icon-box { margin-bottom: 10px; }
     .service-icon-box img { margin: auto; }
 
-.service-content-box { text-align: center; }
+.service-content-box { 
+    text-align: center; 
+    transition: all 0.3s ease;
+}
+
+.service-item:hover {
+    box-shadow: 0 4px 20px rgba(0, 0, 0, 0.1);
+    transform: translateY(-4px); 
+}
 
 .service-item-title { 
     margin-bottom: 7px; 
@@ -598,6 +606,12 @@ article { display: none; }
     margin: 10px;
 }
 
+.center-div {
+    display: flex; 
+    justify-content: center; 
+    margin: 10px;
+}
+
 /* modal headers */
 .modal-h {
     color: rgb(93, 110, 127);
@@ -610,6 +624,18 @@ article { display: none; }
     letter-spacing: 2px;
     margin-top: 10px;
     margin-bottom: 10px;;
+}
+
+.blog-p {
+    margin: 25px; 
+    font-size: 20px;
+    color: white;
+}
+
+.image:hover {
+    padding: 10px;
+    box-shadow: 5px 10px 18px #888888;
+    transform: scale(1.1);
 }
 
 /* modal bold */
@@ -693,6 +719,34 @@ mark {
 
 /*RESUME*/
 
+.summary {
+    color: white;
+    font-weight: var(--fw400);
+    line-height: 30px;
+    font-size: 16px;
+    padding-left: 60px;
+}
+
+.download-div {
+    text-align: center;
+}
+
+  .download-btn {
+    display: inline-block;
+    padding: 12px 24px;
+    background-color: var(--accent-blue);
+    color: white;
+    text-decoration: none;
+    border-radius: 10px;
+    margin: 20px;
+    font-weight: bold;
+    transition: background-color 0.3s ease;
+  }
+
+  .download-btn:hover {
+    background-color: var(--light-accent);
+  }
+
 .article-title { 
     margin-bottom: 30px; 
     color: var(--eerie-black1);
@@ -708,12 +762,12 @@ mark {
     }
 
 .timeline-list {
-    font-size: var(--fs6);
+    font-size: var(--fs5);
     margin-left: 45px;
 }
 
     .timeline-list span {
-        color:#7a9ca4;
+        color: var(--background-dark);
         font-weight: var(--fw600);
         line-height: 1.6;
         letter-spacing: 3px;
@@ -759,6 +813,17 @@ mark {
 }
 
 /*SKILLS*/
+
+.skills-list li {
+    opacity: 0;
+    transform: translateY(20px);
+    transition: all 0.6s ease-out;
+}
+
+.skills-list li.visible {
+    opacity: 1;
+    transform: translateY(0);
+}
 
 .skills-title { margin-bottom: 20px; }
 

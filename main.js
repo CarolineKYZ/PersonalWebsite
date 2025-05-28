@@ -132,6 +132,21 @@ for(let i = 0; i < navigationLinks.length; i++) {
     });
 }
 
+  const observer = new IntersectionObserver((entries) => {
+    entries.forEach(entry => {
+      if (entry.isIntersecting) {
+        entry.target.classList.add('visible');
+        observer.unobserve(entry.target); // Load once per item
+      }
+    });
+  }, {
+    threshold: 0.1
+  });
+
+  document.querySelectorAll('.skills-list li').forEach(li => {
+    observer.observe(li);
+  });
+
 
 
 
