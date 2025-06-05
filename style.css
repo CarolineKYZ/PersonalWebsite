@@ -656,7 +656,7 @@ article { display: none; }
 }
 
 .sub-title {
-     font-size: var(--fs4);
+    font-size: var(--fs4);
     display: inline;
     padding-bottom: 15px;
     font-weight: 600;
@@ -1562,7 +1562,7 @@ textarea.form-input {
     }
 
     .filter-item button {
-        color: var(--light-gray);
+        color: whitesmoke;
         font-size: var(--fs5);
         transition: var(--transition1);
     }
