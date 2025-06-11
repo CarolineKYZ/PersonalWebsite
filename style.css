@@ -1191,7 +1191,7 @@ video {
     color: white;
 }
 
-    .blog-post-item > a:hover .blog-item-title { color: var(--accent-blue); }
+    .blog-post-item > a:hover .blog-item-title { color: rgb(229, 229, 229); }
 
 .blog-text {
     color: whitesmoke;
