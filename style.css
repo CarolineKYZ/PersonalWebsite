@@ -1,4 +1,6 @@
 @import url('https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap');
+@import url(https://fonts.googleapis.com/css?family=Montserrat);
+@import url(https://fonts.googleapis.com/css?family=Open+Sans:400,700);
 
 :root {
     --bg-gradient-onyx: linear-gradient(to bottom right, hsl(240, 1%, 25%) 3%, hsl(0, 0%, 19%) 97%);
@@ -62,6 +64,7 @@
     margin: 0;
     padding: 0;
     box-sizing: border-box;
+    font-family: Arial, Helvetica, sans-serif;
 }
 
 a {text-decoration: none; }
@@ -112,6 +115,90 @@ main {
     margin-bottom: 75px;
     min-width: 259px;
 }
+
+/* Website Construction... */
+
+.hide-completely {
+    visibility: hidden;
+    display: none;
+    opacity: 0;
+}
+
+.center-content {
+    height: 100vh;
+    width: 100vw;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+
+    position: fixed;
+    inset: 0;
+    z-index: 9999;
+}
+
+.construction-box {
+    background: rgba(255, 255, 255, 0.9);
+    width: 50%;
+    max-width: 600px;
+    min-width: 280px;
+    padding: 2.5rem;
+    border-radius: 20px;
+    text-align: center;
+
+    box-shadow:
+        0 20px 40px rgba(0, 0, 0, 0.397),
+        0 0 30px rgba(255, 255, 255, 0.753);
+
+    opacity: 0;
+    animation: fadeInUp 1.2s ease-out forwards;
+    z-index: 9999;
+}
+
+.construction-box h1 {
+    font-size: 2rem;
+    margin-bottom: 1rem;
+    color: #222;
+}
+
+.construction-box p {
+    font-size: 1.1rem;
+    color: #555;
+}
+
+/* Mobile adjustments */
+@media (max-width: 768px) {
+    .construction-box {
+        width: 85%;
+        padding: 2rem;
+    }
+}
+
+@keyframes fadeInUp {
+    from {
+        opacity: 0;
+        transform: translateY(20px);
+    }
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+.construction-box h1 {
+    font-size: 1.6rem;
+}
+
+.glass-pane {
+    position: fixed;
+    inset: 0;
+    background: rgba(255, 255, 255, 0.04);
+    backdrop-filter: blur(6px) saturate(110%);
+    -webkit-backdrop-filter: blur(6px) saturate(110%);
+    z-index: 1;
+    pointer-events: none;
+}
+
+/******/
 
 /* sidebar container */
 .sidebar, article {
